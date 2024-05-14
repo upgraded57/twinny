@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+@font-face {
+  font-family: "colgent";
+  src: url("./assets/font/colgent_regular-webfont.woff2") format("woff2"),
+    /* Modern Browsers */ url("./assets/font/colgent_regular-webfont.woff")
+      format("woff"); /* Older Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-text {
+  font-family: "colgent", sans-serif;
+}
+
+.p-text {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 400;
+}
+
+.pry-bg {
+  background: #f38120;
+}
