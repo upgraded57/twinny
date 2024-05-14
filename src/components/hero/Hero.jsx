@@ -3,6 +3,21 @@ import "./hero.css";
 import arrow from "../../assets/images/arrow.svg";
 import event from "../../assets/images/event.svg";
 
+// shadcn ui component
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+import { PiForkKnifeBold, PiHandSoapBold } from "react-icons/pi";
+import { GiWaxTablet } from "react-icons/gi";
+import { RiParkingLine } from "react-icons/ri";
+
 export default function Hero() {
   return (
     <div className="hero w-full pt-[150px] pb-[50px] md:pb-0 md:pt-0 min-h-screen relative flex items-center justify-center flex-col gap-4 text-white px-[4vw] lg:px-[12vw]">
@@ -18,30 +33,70 @@ export default function Hero() {
       <div className="p-7 bg-white bg-opacity-75 backdrop-blur-sm block w-full">
         <div className="w-full text-black mb-5">
           <p className="h-text text-lg md:text-xl mb-2">Apartment Option</p>
-          <div className="w-full flex items-center p-1 justify-between bg-white">
-            <span></span>
-            <span className="flex items-center justify-center border-l-2 border-gray-300 w-[32px] aspect-square">
-              <img src={arrow} alt="" />
-            </span>
-          </div>
+          <Select className="w-full flex items-center p-1  bg-white">
+            <SelectTrigger className="bg-white rounded-none">
+              <SelectValue placeholder="Select an Apartment" />
+            </SelectTrigger>
+
+            <SelectContent className="bg-white">
+              <SelectGroup>
+                <SelectLabel>Apartments</SelectLabel>
+                <SelectItem
+                  value="outdoor_dining"
+                  className="hover:bg-gray-100"
+                >
+                  <span className="flex items-center gap-3">
+                    <PiForkKnifeBold />
+                    <p className="p-text uppercase">outdoor dining</p>
+                  </span>
+                </SelectItem>
+                <SelectItem value="tuft" className="hover:bg-gray-100">
+                  <span className="flex items-center gap-3">
+                    <GiWaxTablet />
+                    <p className="p-text uppercase">tuft & needle mattresses</p>
+                  </span>
+                </SelectItem>
+                <SelectItem value="malin" className="hover:bg-gray-100">
+                  <span className="flex items-center gap-3">
+                    <PiHandSoapBold />
+                    <p className="p-text uppercase">
+                      malin + goetz bath products
+                    </p>
+                  </span>
+                </SelectItem>
+                <SelectItem value="parking" className="hover:bg-gray-100">
+                  <span className="flex items-center gap-3">
+                    <RiParkingLine />
+                    <p className="p-text uppercase">parking</p>
+                  </span>
+                </SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </div>
 
         <div className="w-full flex flex-col md:flex-row md:items-end gap-4 text-black">
           <div className="basis-4/12">
-            <p className="h-text text-lg md:text-xl mb-2">Apartment Option</p>
-            <div className="w-full flex items-center p-1 justify-between bg-white">
-              <span></span>
-              <span className="flex items-center justify-center border-l-2 border-gray-300 w-[32px] aspect-square">
-                <img src={event} alt="" />
+            <p className="h-text text-lg md:text-xl mb-2">Check In</p>
+            <div className="w-full flex p-2  bg-white">
+              <span className="w-full">
+                <input
+                  type="date"
+                  name="check_in"
+                  className="w-full p-text outline-none bg-white"
+                />
               </span>
             </div>
           </div>
           <div className="basis-4/12">
-            <p className="h-text text-lg md:text-xl mb-2">Apartment Option</p>
-            <div className="w-full flex items-center p-1 justify-between bg-white">
-              <span></span>
-              <span className="flex items-center justify-center border-l-2 border-gray-300 w-[32px] aspect-square">
-                <img src={event} alt="" />
+            <p className="h-text text-lg md:text-xl mb-2">Check Out</p>
+            <div className="w-full p-2 bg-white">
+              <span className="w-full">
+                <input
+                  type="date"
+                  name="check_out"
+                  className="w-full p-text outline-none bg-white"
+                />
               </span>
             </div>
           </div>
@@ -63,3 +118,21 @@ export default function Hero() {
     </div>
   );
 }
+
+/*
+<Select>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder="Select a fruit" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>Fruits</SelectLabel>
+          <SelectItem value="apple">Apple</SelectItem>
+          <SelectItem value="banana">Banana</SelectItem>
+          <SelectItem value="blueberry">Blueberry</SelectItem>
+          <SelectItem value="grapes">Grapes</SelectItem>
+          <SelectItem value="pineapple">Pineapple</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
+*/
