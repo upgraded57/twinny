@@ -1,7 +1,6 @@
 import "./hero.css";
 
 import arrow from "../../assets/images/arrow.svg";
-import event from "../../assets/images/event.svg";
 
 // shadcn ui component
 import {
@@ -118,21 +117,3 @@ export default function Hero() {
     </div>
   );
 }
-
-/*
-<Select>
-      <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Select a fruit" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Fruits</SelectLabel>
-          <SelectItem value="apple">Apple</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Blueberry</SelectItem>
-          <SelectItem value="grapes">Grapes</SelectItem>
-          <SelectItem value="pineapple">Pineapple</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
-*/

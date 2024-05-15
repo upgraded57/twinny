@@ -33,7 +33,7 @@ function App() {
           Our Hotels/Shortlets
         </h1>
         <Hotel />
-        <Hotel />
+        <Hotel reverse />
         <Hotel />
       </div>
 

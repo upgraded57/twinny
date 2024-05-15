@@ -7,8 +7,12 @@ export default function Hotel({ reverse }) {
   const features = [1, 2, 3, 4, 5, 6, 7, 8];
 
   return (
-    <div className="my-10 lg:my-0">
-      <div className="px-[4vw] flex flex-col md:flex-row items-start gap-8">
+    <div className="my-12">
+      <div
+        className={`px-[4vw] flex flex-col md:flex-row items-start gap-8 ${
+          reverse && "md:flex-row-reverse"
+        }`}
+      >
         <div className="basis-1/1 md:basis-1/2">
           <img src={hotelImg} alt="" className="w-full h-full object-cover" />
         </div>
@@ -45,7 +49,11 @@ export default function Hotel({ reverse }) {
         </div>
       </div>
 
-      <div className="w-full flex justify-end px-[4vw]">
+      <div
+        className={`w-full flex ${
+          reverse ? "justify-start" : "justify-end"
+        } px-[4vw]`}
+      >
         <div className="w-full lg:w-[85%] bg-opacity-75 backdrop-blur-md relative lg:-top-[40px] xl:-top-[120px] bg-gray-300 p-4">
           <h2 className="h-text bg-[#5F462C] w-full max-w-[421px] px-4 py-2 text-white text-2xl md:text-3xl">
             Features
