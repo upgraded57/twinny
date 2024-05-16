@@ -1,5 +1,6 @@
 import moneyImg from "@/assets/images/money.svg";
 import mapImg from "@/assets/images/map.svg";
+import { Link } from "react-router-dom";
 
 export default function HotelCard({ hotel }) {
   return (
@@ -24,12 +25,11 @@ export default function HotelCard({ hotel }) {
         </span>
         <h3 className="h-text border-b-2 text-3xl">{`NGN${hotel.price}`}</h3>
       </div>
-      <button
-        type="button"
-        className="w-3/5 my-4 bg-[#F38120] h-text p-3 text-black text-2xl"
-      >
-        Book Now
-      </button>
+      <Link to={`/hotel/${hotel.id}`}>
+        <button className="w-3/4 my-4 bg-[#F38120] h-text p-3 text-black text-2xl">
+          Book Now
+        </button>
+      </Link>
     </div>
   );
 }

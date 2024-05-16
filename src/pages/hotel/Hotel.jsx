@@ -11,6 +11,7 @@ import arrow from "@/assets/images/arrow.svg";
 
 import HotelCard from "@/components/hotelcard/HotelCard";
 import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Hotel() {
   const { hotel_id } = useParams();
@@ -18,12 +19,15 @@ export default function Hotel() {
 
   const hotelCards = [hotelsData[1], hotelsData[2]];
 
-  console.log(hotel);
-
   const breadcrumbLinks = [
     { id: 1, location: "/", text: "Home" },
     { id: 2, location: window.location.pathname, text: hotel.title },
   ];
+
+  // scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [hotel_id]);
 
   return (
     <>
