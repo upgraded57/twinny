@@ -8,7 +8,7 @@ export const Routes = [
     element: <Home />,
   },
   {
-    path: "hotel/:id",
+    path: "hotel/:hotel_id",
     element: <Hotel />,
   },
   {

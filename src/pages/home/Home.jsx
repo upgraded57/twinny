@@ -1,12 +1,14 @@
 import Hotel from "@/Hotel";
+import { hotelsData } from "@/assets/temp/Data";
 import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import Nav from "@/components/nav/Nav";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
-      <Nav />
+      <Nav type={1} />
       <Hero />
       <div className="bg-black py-12">
         <div className="max-w-[850px] px-[4vw] flex items-center text-center mx-auto flex-col gap-5">
@@ -20,12 +22,13 @@ export default function Home() {
             con
           </p>
 
-          <button
+          <Link
+            to="/about"
             type="button"
-            className="w-full max-w-[600px] p-3 border border-[#f38120] text-[#f38120]"
+            className="w-full max-w-[600px] p-3 border border-[#f38120] text-[#f38120] hover:bg-[#f38120] hover:text-black transition-colors"
           >
             Know More
-          </button>
+          </Link>
         </div>
       </div>
 
@@ -33,9 +36,11 @@ export default function Home() {
         <h1 className="text-center h-text text-3xl lg:text-6xl mb-10">
           Our Hotels/Shortlets
         </h1>
-        <Hotel />
-        <Hotel reverse />
-        <Hotel />
+        {hotelsData.map((hotel) => (
+          <Link to={`/hotel/${hotel.id}`}>
+            <Hotel hotel={hotel} key={hotel.id} />
+          </Link>
+        ))}
       </div>
 
       <Footer />
