@@ -75,7 +75,7 @@ export default function Hotel() {
           </div>
           <button
             type="button"
-            className="w-3/4 my-4 bg-[#F38120] h-text p-3 text-black text-2xl"
+            className="w-3/4 my-4 bg-pry-clr h-text p-3 text-black text-2xl"
           >
             Book Now
           </button>
@@ -149,8 +149,8 @@ export default function Hotel() {
           View Others
         </h1>
         <div className="flex flex-col md:flex-row gap-10 md:items-center">
-          {hotelCards.map((hotel) => (
-            <HotelCard hotel={hotel} />
+          {hotelCards.map((hotel, idx) => (
+            <HotelCard hotel={hotel} key={idx} />
           ))}
         </div>
       </div>

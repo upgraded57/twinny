@@ -5,7 +5,7 @@ import pinImg from "../../assets/images/pin.svg";
 
 export default function Footer() {
   return (
-    <footer className="px-[4vw] bg-[#F38120] text-black py-10">
+    <footer className="px-[4vw] bg-pry-clr text-black py-10">
       <div className="flex justify-center border-b-[1px] border-black pb-8">
         <img src={logo} alt="" className="w-[170px]" />
       </div>

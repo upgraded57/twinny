@@ -113,7 +113,7 @@ export default function About() {
             </div>
             <button
               type="submit"
-              className="w-full bg-[#F38120] p-text text-black text-lg p-3"
+              className="w-full bg-pry-clr p-text text-black text-lg p-3"
             >
               Contact Us
             </button>

@@ -23,10 +23,10 @@ export const hotelsData = [
     id: 1,
     images: [hotel_1_img_1, hotel_1_img_2, hotel_1_img_3, hotel_1_img_4],
     img: hotel_img_1,
-    title: "2-Bedroom Apartment",
+    title: "Deluxe 1 Bedroom",
     location:
       "Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria.",
-    price: "60,000",
+    price: "50,000",
     features: [
       {
         text: "Air Conditioner",
@@ -68,9 +68,9 @@ export const hotelsData = [
     id: 2,
     img: hotel_img_2,
     images: [hotel_1_img_1, hotel_1_img_2, hotel_1_img_3, hotel_1_img_4],
-    title: "Hotel space option 1",
+    title: "Deluxe 2 Bedroom",
     location: "3891 Ranchview Dr. Richardson, California 62639.",
-    price: "80,000",
+    price: "50,000",
     features: [
       {
         text: "Air Conditioner",
@@ -112,9 +112,97 @@ export const hotelsData = [
     id: 3,
     images: [hotel_1_img_1, hotel_1_img_2, hotel_1_img_3, hotel_1_img_4],
     img: hotel_img_3,
-    title: "Hotel space option 2",
+    title: "Executive Bedroom",
     location: "3891 Ranchview Dr. Richardson, California 62639.",
-    price: "80,000",
+    price: "60,000",
+    features: [
+      {
+        text: "Air Conditioner",
+        icon: fan_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Big Parking Space",
+        icon: door_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+    ],
+    layout: "normal",
+  },
+
+  {
+    id: 4,
+    images: [hotel_1_img_1, hotel_1_img_2, hotel_1_img_3, hotel_1_img_4],
+    img: hotel_img_3,
+    title: "1-Bedroom Apartment",
+    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    price: "100,000",
+    features: [
+      {
+        text: "Air Conditioner",
+        icon: fan_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Swimming Pool",
+        icon: swim_icon,
+      },
+      {
+        text: "Big Parking Space",
+        icon: door_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+      {
+        text: "4 bedroom flat",
+        icon: bed_icon,
+      },
+    ],
+    layout: "alt",
+  },
+
+  {
+    id: 5,
+    images: [hotel_1_img_1, hotel_1_img_2, hotel_1_img_3, hotel_1_img_4],
+    img: hotel_img_3,
+    title: "Premium Bedroom",
+    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    price: "70,000",
     features: [
       {
         text: "Air Conditioner",

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import mapImg from "./assets/images/map.svg";
 import moneyImg from "./assets/images/money.svg";
 
@@ -39,9 +40,11 @@ export default function Hotel({ hotel }) {
             </span>
           </div>
 
-          <button type="button" className="py-3 px-6 p-text my-4 bg-[#F38120]">
-            Book Reservation
-          </button>
+          <Link to={`/hotel/${hotel.id}`}>
+            <button type="button" className="py-3 px-6 p-text my-4 bg-pry-clr">
+              Book Reservation
+            </button>
+          </Link>
         </div>
       </div>
 

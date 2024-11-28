@@ -26,7 +26,7 @@ export default function HotelCard({ hotel }) {
         <h3 className="h-text border-b-2 text-3xl">{`NGN${hotel.price}`}</h3>
       </div>
       <Link to={`/hotel/${hotel.id}`}>
-        <button className="w-3/4 my-4 bg-[#F38120] h-text p-3 text-black text-2xl">
+        <button className="w-3/4 my-4 bg-pry-clr h-text p-3 text-black text-2xl">
           Book Now
         </button>
       </Link>

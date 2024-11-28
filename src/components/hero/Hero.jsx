@@ -34,7 +34,7 @@ export default function Hero() {
           <p className="h-text text-lg md:text-xl mb-2">Apartment Option</p>
           <Select className="w-full flex items-center p-1  bg-white">
             <SelectTrigger className="bg-white rounded-none">
-              <SelectValue placeholder="Select an Apartment" />
+              <SelectValue placeholder="Choose an apartment option" />
             </SelectTrigger>
 
             <SelectContent className="bg-white">

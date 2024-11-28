@@ -10,7 +10,11 @@ export default {
   },
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "pry-clr": "#F38120",
+      },
+    },
   },
   plugins: [],
 };

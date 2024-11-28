@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Nav type={1} />
       <Hero />
-      <div className="bg-black py-12">
+      <div className="bg-black py-12 mb-10">
         <div className="max-w-[850px] px-[4vw] flex items-center text-center mx-auto flex-col gap-5">
           <h1 className="h-text text-3xl lg:text-5xl text-white">
             About Twinny Hotel & Suites
@@ -25,21 +25,19 @@ export default function Home() {
           <Link
             to="/about"
             type="button"
-            className="w-full max-w-[600px] p-3 border border-[#f38120] text-[#f38120] hover:bg-[#f38120] hover:text-black transition-colors"
+            className="w-full max-w-[600px] p-3 border border-pry-clr text-pry-clr hover:bg-pry-clr hover:text-black transition-colors"
           >
             Know More
           </Link>
         </div>
       </div>
 
-      <div className="pt-10">
-        <h1 className="text-center h-text text-3xl lg:text-6xl mb-10">
+      <div className=" pt-10">
+        <h1 className="text-center h-text text-3xl lg:text-6xl my-10">
           Our Hotels/Shortlets
         </h1>
-        {hotelsData.map((hotel) => (
-          <Link to={`/hotel/${hotel.id}`}>
-            <Hotel hotel={hotel} key={hotel.id} />
-          </Link>
+        {hotelsData.map((hotel, idx) => (
+          <Hotel hotel={hotel} key={idx} />
         ))}
       </div>
 
