@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 export default function HotelCard({ hotel }) {
   return (
-    <div className="block">
-      <div className="w-full">
+    <div className="block w-full">
+      <div className="w-full aspect-[2/1.4]">
         <img
           src={hotel.img}
           alt={hotel.title}
-          className="w-full object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
       <h1 className="h-text text-2xl my-4 md:text-4xl">{hotel.title}</h1>

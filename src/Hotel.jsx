@@ -57,7 +57,7 @@ export default function Hotel({ hotel }) {
           <h2 className="h-text bg-[#5F462C] w-full max-w-[421px] px-4 py-2 text-white text-2xl md:text-3xl">
             Features
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 my-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 my-4 gap-x-2">
             {hotel.features.map((feature, idx) => (
               <div key={idx} className="flex gap-3 items-center my-2">
                 <span className="aspect-square w-[32px] md:w-[42px]">

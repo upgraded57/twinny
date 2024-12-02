@@ -1,4 +1,3 @@
-import "./hotel.css";
 import Footer from "@/components/footer/Footer";
 import { hotelsData } from "@/assets/temp/Data";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
@@ -6,18 +5,40 @@ import Nav from "@/components/nav/Nav";
 
 import mapImg from "@/assets/images/map.svg";
 import callImg from "@/assets/images/reserve.svg";
+import Viewer from "react-viewer";
 
-import arrow from "@/assets/images/arrow.svg";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 import HotelCard from "@/components/hotelcard/HotelCard";
 import { useParams } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from "@/components/ui/carousel";
+import { images } from "@/assets/images/images";
+import { Button } from "@/components/ui/button";
 
 export default function Hotel() {
   const { hotel_id } = useParams();
   const hotel = hotelsData[hotel_id - 1];
 
-  const hotelCards = [hotelsData[1], hotelsData[2]];
+  const [visible, setVisible] = useState(false);
+
+  const hotelCards = [
+    hotelsData[Math.floor(Math.random() * 5)],
+    hotelsData[Math.floor(Math.random() * 5)],
+  ];
 
   const breadcrumbLinks = [
     { id: 1, location: "/", text: "Home" },
@@ -29,8 +50,58 @@ export default function Hotel() {
     window.scrollTo(0, 0);
   }, [hotel_id]);
 
+  const [booking, setBooking] = useState({
+    apartment: hotel.title,
+    checkIn: "",
+    checkOut: "",
+    guests: "",
+  });
+
+  const today = new Date().toISOString().split("T")[0];
+
+  const handleBooking = () => {
+    if (
+      booking.apartment &&
+      booking.checkIn &&
+      booking.checkOut &&
+      booking.guests
+    ) {
+      const text = `Hi, I want to book a reservation for the apartment - *${booking.apartment}*. 
+      I will be checking in on - *${booking.checkIn}* and checking out on - *${booking.checkOut}*. 
+      Number of guests is - *${booking.guests}*`;
+      window.location = `https://wa.me/2348140778877?text=${text}`;
+    } else {
+      alert("Please fill in all the reservation data to book a reservation");
+    }
+  };
+
+  const imagesArray = images.filter((img) => img.id === hotel.id);
+  const viewerImgs = imagesArray[0].items.map((img) => ({
+    src: img,
+    alt: "",
+  }));
+
+  const scrollToBookNow = () => {
+    const bookNowDiv = document.getElementById("book_now");
+    if (bookNowDiv) {
+      bookNowDiv.scrollIntoView();
+    }
+  };
+
   return (
     <>
+      <Viewer
+        visible={visible}
+        onClose={() => {
+          setVisible(false);
+        }}
+        images={viewerImgs}
+        rotatable={false}
+        defaultScale={1.5}
+        noImgDetails={true}
+        zoomSpeed={0.5}
+        drag={true}
+      />
       <Nav type={2} />
       <div className="header w-full h-[288px] md:h-[300px] px-[4vw] py-[60px] flex items-end justify-center h-text">
         <h1 className="text-4xl md:text-6xl">{hotel.title}</h1>
@@ -41,12 +112,39 @@ export default function Hotel() {
 
       <div className="px-[4vw] md:flex gap-8 items-start">
         <div className="basis-1/2">
-          <div className="w-full">
-            <img
-              src={hotel.images[0]}
-              alt="Image"
-              className="min-w-full object-cover"
-            />
+          <div className="w-full overflow-hidden">
+            <div className="md:hidden">
+              <Carousel>
+                <CarouselContent className="w-full h-full gap-2">
+                  {hotel.images.map((image, idx) => (
+                    <CarouselItem className="basis-[93%]" key={idx}>
+                      <img
+                        src={image}
+                        alt="Image"
+                        className="min-w-full min-h-full object-cover cursor-pointer"
+                        onClick={() => setVisible(true)}
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                {/* <CarouselPrevious />
+              <CarouselNext /> */}
+              </Carousel>
+            </div>
+
+            <div className="hidden w-full md:grid grid-cols-2 gap-5">
+              {hotel.images.map((image, idx) => (
+                <img
+                  key={idx}
+                  src={image}
+                  alt="Image"
+                  className={`min-w-full min-h-full object-cover cursor-pointer grid-${
+                    idx + 1
+                  }`}
+                  onClick={() => setVisible(true)}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
@@ -73,12 +171,14 @@ export default function Hotel() {
             </span>
             <p className="p-text text-[16px] md:text-[24px]">07042607645</p>
           </div>
-          <button
+
+          <Button
             type="button"
-            className="w-3/4 my-4 bg-pry-clr h-text p-3 text-black text-2xl"
+            className="w-3/4 my-4 bg-pry-clr h-text p-3 rounded-none h-[60px] text-center text-black text-2xl"
+            onClick={scrollToBookNow}
           >
             Book Now
-          </button>
+          </Button>
         </div>
       </div>
 
@@ -100,7 +200,7 @@ export default function Hotel() {
         </div>
       </div>
 
-      <div className="px-[4vw] md:px-[8vw]">
+      <div className="px-[4vw] md:px-[8vw]" id="book_now">
         <div className="p-7 bg-gray-200 bg-opacity-75 backdrop-blur-sm block w-full">
           <div className="w-full flex flex-col md:flex-row md:items-end gap-4 text-black">
             <div className="basis-4/12">
@@ -111,6 +211,13 @@ export default function Hotel() {
                     type="date"
                     name="check_in"
                     className="w-full p-text outline-none bg-white"
+                    min={today}
+                    onChange={(e) =>
+                      setBooking((prev) => ({
+                        ...prev,
+                        checkIn: e.target.value,
+                      }))
+                    }
                   />
                 </span>
               </div>
@@ -123,21 +230,58 @@ export default function Hotel() {
                     type="date"
                     name="check_out"
                     className="w-full p-text outline-none bg-white"
+                    min={today}
+                    onChange={(e) =>
+                      setBooking((prev) => ({
+                        ...prev,
+                        checkOut: e.target.value,
+                      }))
+                    }
                   />
                 </span>
               </div>
             </div>
             <div className="basis-2/12">
               <p className="h-text text-lg md:text-xl mb-2">No of Guests</p>
-              <div className="w-full flex items-center p-1 justify-between bg-white">
-                <span></span>
-                <span className="flex items-center justify-center border-l-2 border-gray-300 w-[32px] aspect-square">
-                  <img src={arrow} alt="" />
-                </span>
+              <div className="w-full bg-white">
+                <Select
+                  className="w-full flex items-center bg-white"
+                  onValueChange={(value) =>
+                    setBooking((prev) => ({
+                      ...prev,
+                      guests: value.toString(),
+                    }))
+                  }
+                >
+                  <SelectTrigger className="bg-white rounded-none">
+                    <SelectValue placeholder="" />
+                  </SelectTrigger>
+
+                  <SelectContent className="bg-white">
+                    <SelectGroup>
+                      <SelectLabel>Guests</SelectLabel>
+
+                      {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
+                        (num, idx) => (
+                          <SelectItem
+                            key={idx}
+                            value={num}
+                            className="hover:bg-gray-100"
+                          >
+                            <p className="p-text uppercase">{num}</p>
+                          </SelectItem>
+                        )
+                      )}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
             </div>
 
-            <button className="basis-2/12 pry-bg h-text p-3 md:p-5">
+            <button
+              className="basis-2/12 pry-bg h-text p-3 md:p-5"
+              onClick={handleBooking}
+            >
               Book Reservations
             </button>
           </div>
@@ -148,9 +292,11 @@ export default function Hotel() {
         <h1 className="h-text text-3xl md:text-4xl text-center py-10">
           View Others
         </h1>
-        <div className="flex flex-col md:flex-row gap-10 md:items-center">
+        <div className="flex flex-col md:flex-row gap-10 md:items-stretch">
           {hotelCards.map((hotel, idx) => (
-            <HotelCard hotel={hotel} key={idx} />
+            <div className="basis-1/2 w-full" key={idx}>
+              <HotelCard hotel={hotel} />
+            </div>
           ))}
         </div>
       </div>

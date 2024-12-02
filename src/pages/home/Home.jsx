@@ -16,10 +16,11 @@ export default function Home() {
             About Twinny Hotel & Suites
           </h1>
           <p className="p-text text-white text-md lg:text-2xl">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo con Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            con
+            We provide affordable luxury, making us a top choice for travellers
+            looking for hotels close to Lagos airport. Being one of the finest
+            hotels in Oshodi-Isolo, our well-furnished rooms, excellent customer
+            service, and relaxing atmosphere make us one of the best and most
+            affordable hotels in Ajao Estate.
           </p>
 
           <Link

@@ -1,11 +1,11 @@
-import hotel_img_1 from "../images/bg_1.png";
-import hotel_img_2 from "../images/bg_2.png";
-import hotel_img_3 from "../images/bg_3.png";
+import hotel_img_1 from "../images/bg_1.webp";
+import hotel_img_2 from "../images/bg_2.webp";
+import hotel_img_3 from "../images/bg_3.webp";
 
-import hotel_1_img_1 from "../images/hotel_1_img_1.png";
-import hotel_1_img_2 from "../images/hotel_1_img_2.png";
-import hotel_1_img_3 from "../images/hotel_1_img_3.png";
-import hotel_1_img_4 from "../images/hotel_1_img_4.png";
+import hotel_1_img_1 from "../images/hotel_1_img_1.webp";
+import hotel_1_img_2 from "../images/hotel_1_img_2.webp";
+import hotel_1_img_3 from "../images/hotel_1_img_3.webp";
+import hotel_1_img_4 from "../images/hotel_1_img_4.webp";
 
 import fan_icon from "../images/fan.svg";
 import game_icon from "../images/game.svg";
@@ -15,8 +15,6 @@ import gate_icon from "../images/gate.svg";
 import bed_icon from "../images/bed.svg";
 import wifi_icon from "../images/wifi.svg";
 import food_icon from "../images/food.svg";
-import swim_icon from "../images/swim.svg";
-import door_icon from "../images/door.svg";
 
 export const hotelsData = [
   {
@@ -49,7 +47,7 @@ export const hotelsData = [
         icon: gate_icon,
       },
       {
-        text: "2 bedroom flat",
+        text: "Laundry Facility",
         icon: bed_icon,
       },
       {
@@ -77,32 +75,32 @@ export const hotelsData = [
         icon: fan_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "PS 5 Console",
+        icon: game_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "24hrs Electricity",
+        icon: plug_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "DSTV & Netflix",
+        icon: tv_icon,
       },
       {
-        text: "Big Parking Space",
-        icon: door_icon,
+        text: "Gated Estate",
+        icon: gate_icon,
       },
       {
-        text: "4 bedroom flat",
+        text: "Laundry Facility",
         icon: bed_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Unlimited Wifi",
+        icon: wifi_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Kitchen",
+        icon: food_icon,
       },
     ],
     layout: "alt",
@@ -121,32 +119,32 @@ export const hotelsData = [
         icon: fan_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "PS 5 Console",
+        icon: game_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "24hrs Electricity",
+        icon: plug_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "DSTV & Netflix",
+        icon: tv_icon,
       },
       {
-        text: "Big Parking Space",
-        icon: door_icon,
+        text: "Gated Estate",
+        icon: gate_icon,
       },
       {
-        text: "4 bedroom flat",
+        text: "Laundry Facility",
         icon: bed_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Unlimited Wifi",
+        icon: wifi_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Kitchen",
+        icon: food_icon,
       },
     ],
     layout: "normal",
@@ -165,32 +163,32 @@ export const hotelsData = [
         icon: fan_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "PS 5 Console",
+        icon: game_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "24hrs Electricity",
+        icon: plug_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "DSTV & Netflix",
+        icon: tv_icon,
       },
       {
-        text: "Big Parking Space",
-        icon: door_icon,
+        text: "Gated Estate",
+        icon: gate_icon,
       },
       {
-        text: "4 bedroom flat",
+        text: "Laundry Facility",
         icon: bed_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Unlimited Wifi",
+        icon: wifi_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Kitchen",
+        icon: food_icon,
       },
     ],
     layout: "alt",
@@ -209,32 +207,32 @@ export const hotelsData = [
         icon: fan_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "PS 5 Console",
+        icon: game_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "24hrs Electricity",
+        icon: plug_icon,
       },
       {
-        text: "Swimming Pool",
-        icon: swim_icon,
+        text: "DSTV & Netflix",
+        icon: tv_icon,
       },
       {
-        text: "Big Parking Space",
-        icon: door_icon,
+        text: "Gated Estate",
+        icon: gate_icon,
       },
       {
-        text: "4 bedroom flat",
+        text: "Laundry Facility",
         icon: bed_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Unlimited Wifi",
+        icon: wifi_icon,
       },
       {
-        text: "4 bedroom flat",
-        icon: bed_icon,
+        text: "Kitchen",
+        icon: food_icon,
       },
     ],
     layout: "normal",

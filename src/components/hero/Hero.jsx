@@ -1,7 +1,3 @@
-import "./hero.css";
-
-import arrow from "../../assets/images/arrow.svg";
-
 // shadcn ui component
 import {
   Select,
@@ -12,27 +8,60 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-import { PiForkKnifeBold, PiHandSoapBold } from "react-icons/pi";
-import { GiWaxTablet } from "react-icons/gi";
-import { RiParkingLine } from "react-icons/ri";
+import { hotelsData } from "@/assets/temp/Data";
+import { useState } from "react";
 
 export default function Hero() {
+  const [booking, setBooking] = useState({
+    apartment: "",
+    checkIn: "",
+    checkOut: "",
+    guests: "",
+  });
+
+  const today = new Date().toISOString().split("T")[0];
+
+  const handleBooking = () => {
+    if (
+      booking.apartment &&
+      booking.checkIn &&
+      booking.checkOut &&
+      booking.guests
+    ) {
+      const text = `Hi, I want to book a reservation for the apartment - *${booking.apartment}*. 
+      I will be checking in on - *${booking.checkIn}* and checking out on - *${booking.checkOut}*. 
+      Number of guests is - *${booking.guests}*`;
+      window.location = `https://wa.me/2348140778877?text=${text}`;
+    } else {
+      alert("Please fill in all the reservation data to book a reservation");
+    }
+  };
+
   return (
     <div className="hero w-full pt-[150px] pb-[50px] md:pb-0 md:pt-0 min-h-screen relative flex items-center justify-center flex-col gap-4 text-white px-[4vw] lg:px-[12vw]">
       <h1 className="h-text text-4xl lg:text-6xl text-center">
         Welcome to Twinny Hotel & Suites
       </h1>
       <p className="p-text text-center max-w-[850px] text-md lg:text-2xl">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-        ut aliquip ex ea commodo con Ut enim ad minim veniam, quis nostrud
-        exercitation ullamco laboris nisi ut aliquip ex ea commodo con
+        Twinny Hotel and Suites is a comfortable and affordable hotel located in
+        Ejigbo, close to Ajao Estate, Oshodi-Isolo, Lagos, offering modern and
+        high-quality accommodations for both business and leisure travellers. We
+        provide affordable luxury, making us a top choice for travellers looking
+        for hotels close to Lagos airport.
       </p>
 
       <div className="p-7 bg-white bg-opacity-75 backdrop-blur-sm block w-full">
         <div className="w-full text-black mb-5">
           <p className="h-text text-lg md:text-xl mb-2">Apartment Option</p>
-          <Select className="w-full flex items-center p-1  bg-white">
+          <Select
+            className="w-full flex items-center p-1 bg-white"
+            onValueChange={(value) =>
+              setBooking((prev) => ({
+                ...prev,
+                apartment: value,
+              }))
+            }
+          >
             <SelectTrigger className="bg-white rounded-none">
               <SelectValue placeholder="Choose an apartment option" />
             </SelectTrigger>
@@ -40,35 +69,18 @@ export default function Hero() {
             <SelectContent className="bg-white">
               <SelectGroup>
                 <SelectLabel>Apartments</SelectLabel>
-                <SelectItem
-                  value="outdoor_dining"
-                  className="hover:bg-gray-100"
-                >
-                  <span className="flex items-center gap-3">
-                    <PiForkKnifeBold />
-                    <p className="p-text uppercase">outdoor dining</p>
-                  </span>
-                </SelectItem>
-                <SelectItem value="tuft" className="hover:bg-gray-100">
-                  <span className="flex items-center gap-3">
-                    <GiWaxTablet />
-                    <p className="p-text uppercase">tuft & needle mattresses</p>
-                  </span>
-                </SelectItem>
-                <SelectItem value="malin" className="hover:bg-gray-100">
-                  <span className="flex items-center gap-3">
-                    <PiHandSoapBold />
+
+                {hotelsData.map((hotel, idx) => (
+                  <SelectItem
+                    key={idx}
+                    value={hotel.title}
+                    className="hover:bg-gray-100"
+                  >
                     <p className="p-text uppercase">
-                      malin + goetz bath products
+                      {hotel.title} - NGN{hotel.price}
                     </p>
-                  </span>
-                </SelectItem>
-                <SelectItem value="parking" className="hover:bg-gray-100">
-                  <span className="flex items-center gap-3">
-                    <RiParkingLine />
-                    <p className="p-text uppercase">parking</p>
-                  </span>
-                </SelectItem>
+                  </SelectItem>
+                ))}
               </SelectGroup>
             </SelectContent>
           </Select>
@@ -83,6 +95,13 @@ export default function Hero() {
                   type="date"
                   name="check_in"
                   className="w-full p-text outline-none bg-white"
+                  min={today}
+                  onChange={(e) =>
+                    setBooking((prev) => ({
+                      ...prev,
+                      checkIn: e.target.value,
+                    }))
+                  }
                 />
               </span>
             </div>
@@ -95,21 +114,58 @@ export default function Hero() {
                   type="date"
                   name="check_out"
                   className="w-full p-text outline-none bg-white"
+                  min={today}
+                  onChange={(e) =>
+                    setBooking((prev) => ({
+                      ...prev,
+                      checkOut: e.target.value,
+                    }))
+                  }
                 />
               </span>
             </div>
           </div>
           <div className="basis-2/12">
             <p className="h-text text-lg md:text-xl mb-2">No of Guests</p>
-            <div className="w-full flex items-center p-1 justify-between bg-white">
-              <span></span>
-              <span className="flex items-center justify-center border-l-2 border-gray-300 w-[32px] aspect-square">
-                <img src={arrow} alt="" />
-              </span>
+            <div className="w-full bg-white">
+              <Select
+                className="w-full flex items-center p-1 bg-white"
+                onValueChange={(value) =>
+                  setBooking((prev) => ({
+                    ...prev,
+                    guests: value.toString(),
+                  }))
+                }
+              >
+                <SelectTrigger className="bg-white rounded-none">
+                  <SelectValue placeholder="" />
+                </SelectTrigger>
+
+                <SelectContent className="bg-white">
+                  <SelectGroup>
+                    <SelectLabel>Guests</SelectLabel>
+
+                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
+                      (num, idx) => (
+                        <SelectItem
+                          key={idx}
+                          value={num}
+                          className="hover:bg-gray-100"
+                        >
+                          <p className="p-text uppercase">{num}</p>
+                        </SelectItem>
+                      )
+                    )}
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
             </div>
           </div>
 
-          <button className="basis-2/12 pry-bg h-text p-3 md:p-5">
+          <button
+            className="basis-2/12 pry-bg h-text p-3 md:p-5"
+            onClick={handleBooking}
+          >
             Book Reservations
           </button>
         </div>

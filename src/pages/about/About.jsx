@@ -33,13 +33,16 @@ export default function About() {
             About Twinny Suites
           </h1>
           <p className="p-text">
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo con Ut enim ad minim veniam, quis
-            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            con Ut enim ad minim veniam, quis nostrud exercitation ullamco
-            laboris nisi ut aliquip ex ea commodo con Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-            commodo con
+            Twinny Hotel and Suites is a comfortable and affordable hotel
+            located in Ejigbo, close to Ajao Estate, Oshodi-Isolo, Lagos,
+            offering modern and high-quality accommodations for both business
+            and leisure travellers. We provide affordable luxury, making us a
+            top choice for travellers looking for hotels close to Lagos airport.
+            Being one of the finest hotels in Oshodi-Isolo, our well-furnished
+            rooms, excellent customer service, and relaxing atmosphere make us
+            one of the best and most affordable hotels in Ajao Estate. If you're
+            searching for hotels near Murtala Muhammed International Airport
+            Lagos, our hotel and restaurant is just 15 minutes away
           </p>
 
           <div className="mt-[100px]">
