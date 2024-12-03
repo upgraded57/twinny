@@ -3,8 +3,8 @@ import { hotelsData } from "@/assets/temp/Data";
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import Nav from "@/components/nav/Nav";
 
-import mapImg from "@/assets/images/map.svg";
-import callImg from "@/assets/images/reserve.svg";
+import mapImg from "@/assets/images/svgs/map.svg";
+import callImg from "@/assets/images/svgs/reserve.svg";
 import Viewer from "react-viewer";
 
 import {
@@ -103,8 +103,8 @@ export default function Hotel() {
         drag={true}
       />
       <Nav type={2} />
-      <div className="header w-full h-[288px] md:h-[300px] px-[4vw] py-[60px] flex items-end justify-center h-text">
-        <h1 className="text-4xl md:text-6xl">{hotel.title}</h1>
+      <div className="header w-full h-auto md:h-[300px] px-[4vw] py-10 flex items-end justify-center h-text">
+        <h1 className="text-4xl pt-16 md:text-6xl">{hotel.title}</h1>
       </div>
       <div className="px-[4vw] mt-4 mb-12">
         <Breadcrumb links={breadcrumbLinks} />
@@ -116,12 +116,12 @@ export default function Hotel() {
             <div className="md:hidden">
               <Carousel>
                 <CarouselContent className="w-full h-full gap-2">
-                  {hotel.images.map((image, idx) => (
+                  {hotel.images.slice(0, 4).map((image, idx) => (
                     <CarouselItem className="basis-[93%]" key={idx}>
                       <img
                         src={image}
                         alt="Image"
-                        className="min-w-full min-h-full object-cover cursor-pointer"
+                        className="min-w-full h-[290px] object-cover cursor-pointer"
                         onClick={() => setVisible(true)}
                       />
                     </CarouselItem>
@@ -133,7 +133,7 @@ export default function Hotel() {
             </div>
 
             <div className="hidden w-full md:grid grid-cols-2 gap-5">
-              {hotel.images.map((image, idx) => (
+              {hotel.images.slice(0, 4).map((image, idx) => (
                 <img
                   key={idx}
                   src={image}
@@ -169,7 +169,7 @@ export default function Hotel() {
                 className="w-full h-full object-cover"
               />
             </span>
-            <p className="p-text text-[16px] md:text-[24px]">07042607645</p>
+            <p className="p-text text-[16px] md:text-[24px]">0814 077 8877</p>
           </div>
 
           <Button

@@ -1,10 +1,10 @@
 import Breadcrumb from "@/components/breadcrumb/Breadcrumb";
 import Nav from "@/components/nav/Nav";
 
-import ig_logo_gold from "@/assets/images/ig_gold.svg";
-import x_logo_gold from "@/assets/images/x_gold.svg";
-import fb_logo_gold from "@/assets/images/fb_gold.svg";
-import tt_logo_gold from "@/assets/images/tt_gold.svg";
+import ig_logo_gold from "@/assets/images/svgs/ig_gold.svg";
+import x_logo_gold from "@/assets/images/svgs/x_gold.svg";
+import fb_logo_gold from "@/assets/images/svgs/fb_gold.svg";
+import tt_logo_gold from "@/assets/images/svgs/tt_gold.svg";
 import Footer from "@/components/footer/Footer";
 
 export default function About() {

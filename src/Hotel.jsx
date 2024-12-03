@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import mapImg from "./assets/images/map.svg";
-import moneyImg from "./assets/images/money.svg";
+import mapImg from "./assets/images/svgs/map.svg";
+import moneyImg from "./assets/images/svgs/money.svg";
 
 export default function Hotel({ hotel }) {
   return (

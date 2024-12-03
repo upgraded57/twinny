@@ -1,7 +1,7 @@
-import logo from "../../assets/images/logo_black.svg";
-import callImg from "../../assets/images/call.svg";
-import mailImg from "../../assets/images/mail.svg";
-import pinImg from "../../assets/images/pin.svg";
+import logo from "../../assets/images/svgs/logo_black.svg";
+import callImg from "../../assets/images/svgs/call.svg";
+import mailImg from "../../assets/images/svgs/mail.svg";
+import pinImg from "../../assets/images/svgs/pin.svg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
