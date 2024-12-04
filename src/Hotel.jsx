@@ -10,7 +10,7 @@ export default function Hotel({ hotel }) {
           hotel.layout === "alt" && "md:flex-row-reverse"
         }`}
       >
-        <div className="basis-1/1 md:basis-1/2">
+        <div className="basis-1/1 md:basis-1/2 max-h-[290px] overflow-hidden">
           <img src={hotel.img} alt="" className="w-full h-full object-cover" />
         </div>
         <div className="basis-1/1 md:basis-1/2">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function HotelCard({ hotel }) {
   return (
     <div className="block w-full">
-      <div className="w-full aspect-[2/1.4]">
+      <div className="w-full max-h-[290px] overflow-hidden">
         <img
           src={hotel.img}
           alt={hotel.title}

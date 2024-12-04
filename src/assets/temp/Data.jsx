@@ -14,8 +14,7 @@ export const hotelsData = [
     images: images.filter((img) => img.id === 1)[0].items,
     img: images.filter((img) => img.id === 1)[0].items[0],
     title: "Deluxe 1 Bedroom",
-    location:
-      "Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria.",
+    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "50,000",
     features: [
       {
@@ -59,7 +58,7 @@ export const hotelsData = [
     img: images.filter((img) => img.id === 2)[0].items[0],
     images: images.filter((img) => img.id === 2)[0].items,
     title: "Deluxe 2 Bedroom",
-    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "50,000",
     features: [
       {
@@ -101,9 +100,9 @@ export const hotelsData = [
   {
     id: 3,
     images: images.filter((img) => img.id === 3)[0].items,
-    img: images.filter((img) => img.id === 1)[0].items[0],
+    img: images.filter((img) => img.id === 1)[0].items[4],
     title: "Executive Bedroom",
-    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "60,000",
     features: [
       {
@@ -147,7 +146,7 @@ export const hotelsData = [
     images: images.filter((img) => img.id === 4)[0].items,
     img: images.filter((img) => img.id === 4)[0].items[0],
     title: "1-Bedroom Apartment",
-    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "100,000",
     features: [
       {
@@ -191,7 +190,7 @@ export const hotelsData = [
     images: images.filter((img) => img.id === 5)[0].items,
     img: images.filter((img) => img.id === 5)[0].items[0],
     title: "Premium Bedroom",
-    location: "3891 Ranchview Dr. Richardson, California 62639.",
+    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "70,000",
     features: [
       {
