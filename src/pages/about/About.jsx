@@ -6,6 +6,7 @@ import x_logo_gold from "@/assets/images/svgs/x_gold.svg";
 import fb_logo_gold from "@/assets/images/svgs/fb_gold.svg";
 import tt_logo_gold from "@/assets/images/svgs/tt_gold.svg";
 import Footer from "@/components/footer/Footer";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const breadcrumbLinks = [
@@ -48,26 +49,21 @@ export default function About() {
           <div className="mt-[100px]">
             <h5 className="h-text">To reach us</h5>
             <div className="flex gap-6 mt-4 items-center">
-              <img
-                src={ig_logo_gold}
-                alt="Instagram"
-                className="w-[26px] md:w-[54px]"
-              />
-              <img
-                src={x_logo_gold}
-                alt="X - Twitter"
-                className="w-[26px] md:w-[54px]"
-              />
-              <img
-                src={fb_logo_gold}
-                alt="Facebook"
-                className="w-[26px] md:w-[54px]"
-              />
-              <img
-                src={tt_logo_gold}
-                alt="Tiktok"
-                className="w-[26px] md:w-[54px]"
-              />
+              <Link to="https://www.instagram.com/twinny_hotel_and_suites/">
+                <img
+                  src={ig_logo_gold}
+                  alt="Instagram"
+                  className="w-[26px] md:w-[54px]"
+                />
+              </Link>
+
+              <Link to="https://web.facebook.com/profile.php?id=61564680452916">
+                <img
+                  src={fb_logo_gold}
+                  alt="Facebook"
+                  className="w-[26px] md:w-[54px]"
+                />
+              </Link>
             </div>
           </div>
         </div>

@@ -1,11 +1,29 @@
-import Hotel from "@/Hotel";
 import { hotelsData } from "@/assets/temp/Data";
 import Footer from "@/components/footer/Footer";
 import Hero from "@/components/hero/Hero";
 import Nav from "@/components/nav/Nav";
+import Hotel from "@/components/Hotel";
 import { Link } from "react-router-dom";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [viewType, setViewType] = useState("all");
+
+  const [viewData, setViewData] = useState(hotelsData);
+
+  useEffect(() => {
+    let newViews;
+
+    if (viewType === "all") {
+      newViews = hotelsData;
+      setViewData(newViews);
+    } else {
+      newViews = hotelsData.filter((item) => item.type === viewType);
+      setViewData(newViews);
+    }
+  }, [viewType]);
+
   return (
     <>
       <Nav type={1} />
@@ -37,7 +55,36 @@ export default function Home() {
         <h1 className="text-center h-text text-3xl lg:text-6xl my-10">
           Our Hotels/Shortlets
         </h1>
-        {hotelsData.map((hotel, idx) => (
+        <Tabs
+          defaultValue="all"
+          className="w-max mx-auto bg-gray-100 rounded-md"
+        >
+          <TabsList>
+            <TabsTrigger
+              value="all"
+              onClick={() => setViewType("all")}
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+            >
+              All Apartments
+            </TabsTrigger>
+            <TabsTrigger
+              value="hotel"
+              onClick={() => setViewType("hotel")}
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+            >
+              Hotel Apartments
+            </TabsTrigger>
+            <TabsTrigger
+              value="shortlet"
+              onClick={() => setViewType("shortlet")}
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+            >
+              Short Lets
+            </TabsTrigger>
+          </TabsList>
+        </Tabs>
+
+        {viewData.map((hotel, idx) => (
           <Hotel hotel={hotel} key={idx} />
         ))}
       </div>

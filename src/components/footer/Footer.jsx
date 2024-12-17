@@ -4,6 +4,9 @@ import mailImg from "../../assets/images/svgs/mail.svg";
 import pinImg from "../../assets/images/svgs/pin.svg";
 import { Link } from "react-router-dom";
 
+import fb_logo from "@/assets/images/svgs/fb_black.svg";
+import ig_logo from "@/assets/images/svgs/ig_black.svg";
+
 export default function Footer() {
   return (
     <footer className="px-[4vw] bg-pry-clr text-black py-10">
@@ -16,12 +19,11 @@ export default function Footer() {
           <Link to="tel:2348140778877" className="p-text">
             0814 077 8877
           </Link>
-          <p className="p-text">+234 8101 234 567</p>
         </div>
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={mailImg} alt="Call" className="h-[28px]" />
-          <p className="p-text">useremail@gmail.com</p>
-          <p className="p-text">useremail@gmail.com</p>
+          <p className="p-text">hello@twinnyhotelandsuites.com</p>
+          <p className="p-text">abiodun@twinnyhotelandsuites.com</p>
         </div>
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={pinImg} alt="Call" className="h-[28px]" />
@@ -34,6 +36,21 @@ export default function Footer() {
         Twinny Suites - © 2024 All Rights Reserved. Official Website of Twinny
         Suites.
       </p>
+
+      <div className="flex justify-center items-center gap-6 mt-6">
+        <Link
+          to="https://www.instagram.com/twinny_hotel_and_suites/"
+          target="_blank"
+        >
+          <img src={ig_logo} alt="Instagram" className="w-[26px]" />
+        </Link>
+        <Link
+          to="https://web.facebook.com/profile.php?id=61564680452916"
+          target="_blank"
+        >
+          <img src={fb_logo} alt="Facebook" className="w-[26px]" />
+        </Link>
+      </div>
     </footer>
   );
 }

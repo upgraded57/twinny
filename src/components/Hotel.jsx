@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
-import mapImg from "./assets/images/svgs/map.svg";
-import moneyImg from "./assets/images/svgs/money.svg";
+import mapImg from "@/assets/images/svgs/map.svg";
+import moneyImg from "@/assets/images/svgs/money.svg";
 
 export default function Hotel({ hotel }) {
   return (
     <div className="my-12">
       <div
-        className={`px-[4vw] flex flex-col md:flex-row items-start gap-8 ${
+        className={`px-[4vw] flex flex-col md:flex-row items-stretch gap-8 ${
           hotel.layout === "alt" && "md:flex-row-reverse"
         }`}
       >
-        <div className="basis-1/1 md:basis-1/2 max-h-[290px] overflow-hidden">
+        <div className="flex-1 md:basis-1/2 min-h-full overflow-hidden relative">
           <img src={hotel.img} alt="" className="w-full h-full object-cover" />
+          {hotel.type === "shortlet" && (
+            <span className="absolute top-5 right-5 px-2 py-1 rounded-lg border-[1px] border-white bg-pry-clr text-white text-sm">
+              Short Let
+            </span>
+          )}
         </div>
-        <div className="basis-1/1 md:basis-1/2">
+        <div className="flex-1 md:basis-1/2">
           <h2 className="h-text text-3xl lg:text-5xl overflow-hidden text-ellipsis text-nowrap">
             {hotel.title}
           </h2>
@@ -53,7 +58,7 @@ export default function Hotel({ hotel }) {
           hotel.layout === "normal" ? "justify-end" : "justify-start"
         } px-[4vw]`}
       >
-        <div className="w-full lg:w-[85%] bg-opacity-75 backdrop-blur-md relative lg:-top-[40px] xl:-top-[120px] bg-gray-300 p-4">
+        <div className="w-full lg:w-[85%] bg-opacity-75 backdrop-blur-md relative lg:-top-[25px] xl:-top-[100px] bg-gray-300 p-4">
           <h2 className="h-text bg-[#5F462C] w-full max-w-[421px] px-4 py-2 text-white text-2xl md:text-3xl">
             Features
           </h2>

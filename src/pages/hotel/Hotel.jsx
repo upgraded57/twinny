@@ -71,9 +71,9 @@ export default function Hotel() {
         <Breadcrumb links={breadcrumbLinks} />
       </div>
 
-      <div className="px-[4vw] md:flex gap-8 items-start">
-        <div className="basis-1/2">
-          <div className="w-full overflow-hidden">
+      <div className="px-[4vw] md:flex gap-8 items-stretch">
+        <div className="basis-1/2 h-full">
+          <div className="w-full">
             <div className="md:hidden">
               <Carousel>
                 <CarouselContent className="w-full h-full gap-2">
@@ -93,17 +93,16 @@ export default function Hotel() {
               </Carousel>
             </div>
 
-            <div className="hidden w-full md:grid grid-cols-2 gap-5">
+            <div className="hidden w-full h-[450px] max-h-[450px] md:grid grid-cols-2 items-stretch gap-5">
               {hotel.images.slice(0, 4).map((image, idx) => (
-                <img
-                  key={idx}
-                  src={image}
-                  alt="Image"
-                  className={`min-w-full min-h-full object-cover cursor-pointer grid-${
-                    idx + 1
-                  }`}
-                  onClick={() => setVisible(true)}
-                />
+                <div key={idx} className="w-full h-full overflow-hidden">
+                  <img
+                    src={image}
+                    alt="Image"
+                    className="w-full h-full object-cover cursor-pointer"
+                    onClick={() => setVisible(true)}
+                  />
+                </div>
               ))}
             </div>
           </div>
@@ -119,7 +118,7 @@ export default function Hotel() {
               <img src={mapImg} alt="" className="w-full h-full object-cover" />
             </span>
             <p className="p-text text-[16px] md:text-[24px]">
-              Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos
+              {hotel.location}
             </p>
           </div>
           <div className="flex items-center gap-3 my-4">

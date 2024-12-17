@@ -16,6 +16,7 @@ export const hotelsData = [
     title: "Deluxe 1 Bedroom",
     location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "50,000",
+    type: "hotel",
     features: [
       {
         text: "Air Conditioner",
@@ -58,8 +59,10 @@ export const hotelsData = [
     img: images.filter((img) => img.id === 2)[0].items[0],
     images: images.filter((img) => img.id === 2)[0].items,
     title: "Deluxe 2 Bedroom",
-    location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
-    price: "50,000",
+    location:
+      "Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria",
+    price: "150,000",
+    type: "shortlet",
     features: [
       {
         text: "Air Conditioner",
@@ -104,6 +107,7 @@ export const hotelsData = [
     title: "Executive Bedroom",
     location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "60,000",
+    type: "hotel",
     features: [
       {
         text: "Air Conditioner",
@@ -148,6 +152,7 @@ export const hotelsData = [
     title: "1-Bedroom Apartment",
     location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "100,000",
+    type: "hotel",
     features: [
       {
         text: "Air Conditioner",
@@ -192,6 +197,7 @@ export const hotelsData = [
     title: "Premium Bedroom",
     location: "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos",
     price: "70,000",
+    type: "hotel",
     features: [
       {
         text: "Air Conditioner",
