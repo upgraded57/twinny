@@ -10,7 +10,7 @@ export default function Hotel({ hotel }) {
           hotel.layout === "alt" && "md:flex-row-reverse"
         }`}
       >
-        <div className="flex-1 md:basis-1/2 min-h-full overflow-hidden relative">
+        <div className="flex-1 md:basis-1/2 min-h-[full] max-h-[250px] md:max-h-[400px] overflow-hidden relative">
           <img src={hotel.img} alt="" className="w-full h-full object-cover" />
           {hotel.type === "shortlet" && (
             <span className="absolute top-5 right-5 px-2 py-1 rounded-lg border-[1px] border-white bg-pry-clr text-white text-sm">

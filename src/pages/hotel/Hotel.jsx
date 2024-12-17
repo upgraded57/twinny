@@ -129,7 +129,9 @@ export default function Hotel() {
                 className="w-full h-full object-cover"
               />
             </span>
-            <p className="p-text text-[16px] md:text-[24px]">0814 077 8877</p>
+            <p className="p-text text-[16px] md:text-[24px]">
+              {hotel.type === "shortlet" ? "0803 155 7429" : "0814 077 8877"}
+            </p>
           </div>
 
           <Button

@@ -23,14 +23,6 @@ import deluxe_2_img5 from "./Deluxe_2/room_5.jpg";
 import deluxe_2_img6 from "./Deluxe_2/room_6.jpg";
 import deluxe_2_img7 from "./Deluxe_2/room_7.jpg";
 import deluxe_2_img8 from "./Deluxe_2/room_8.jpg";
-import deluxe_2_img9 from "./Deluxe_2/room_9.jpg";
-import deluxe_2_img10 from "./Deluxe_2/room_10.jpg";
-import deluxe_2_img11 from "./Deluxe_2/room_11.jpg";
-import deluxe_2_img12 from "./Deluxe_2/room_12.jpg";
-import deluxe_2_img13 from "./Deluxe_2/room_13.jpg";
-import deluxe_2_img14 from "./Deluxe_2/room_14.jpg";
-import deluxe_2_img15 from "./Deluxe_2/room_15.jpg";
-import deluxe_2_img16 from "./Deluxe_2/room_16.jpg";
 
 import exec_img1 from "./Executive/room_1.jpg";
 import exec_img2 from "./Executive/room_2.jpg";
@@ -120,14 +112,6 @@ export const images = [
       deluxe_2_img6,
       deluxe_2_img7,
       deluxe_2_img8,
-      deluxe_2_img9,
-      deluxe_2_img10,
-      deluxe_2_img11,
-      deluxe_2_img12,
-      deluxe_2_img13,
-      deluxe_2_img14,
-      deluxe_2_img15,
-      deluxe_2_img16,
     ],
   },
   {

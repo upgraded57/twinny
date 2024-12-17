@@ -38,7 +38,10 @@ export default function BookModal({ isOpen, setIsOpen, hotel }) {
       const text = `Hi, I want to book a reservation for the apartment - *${booking.apartment}*. 
       I will be checking in on - *${booking.checkIn}* and checking out on - *${booking.checkOut}*. 
       Number of guests is - *${booking.guests}*`;
-      window.location = `https://wa.me/2348140778877?text=${text}`;
+      window.location =
+        hotel.type === "shortlet"
+          ? `https://wa.me/2348031557429?text=${text}`
+          : `https://wa.me/2348140778877?text=${text}`;
     } else {
       alert("Please fill in all the reservation data to book a reservation");
     }
