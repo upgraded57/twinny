@@ -77,7 +77,7 @@ export default function Hero() {
                     className="hover:bg-gray-100"
                   >
                     <p className="p-text uppercase">
-                      {hotel.title} - NGN{hotel.price}
+                      {hotel.title} {`(${hotel.type})`} - NGN{hotel.price}
                     </p>
                   </SelectItem>
                 ))}

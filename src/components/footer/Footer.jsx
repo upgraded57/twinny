@@ -37,7 +37,7 @@ export default function Footer() {
         Suites.
       </p>
 
-      <div className="flex justify-center items-center gap-6 mt-6">
+      <div className="flex justify-center items-center gap-6 mt-6 border-t-[1px] border-t-black pt-6">
         <Link
           to="https://www.instagram.com/twinny_hotel_and_suites/"
           target="_blank"
