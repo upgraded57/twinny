@@ -63,21 +63,21 @@ export default function Home() {
             <TabsTrigger
               value="all"
               onClick={() => setViewType("all")}
-              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white p-text"
             >
               All Apartments
             </TabsTrigger>
             <TabsTrigger
               value="hotel"
               onClick={() => setViewType("hotel")}
-              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white p-text"
             >
               Hotel Apartments
             </TabsTrigger>
             <TabsTrigger
               value="shortlet"
               onClick={() => setViewType("shortlet")}
-              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white"
+              className="data-[state=active]:bg-pry-clr data-[state=active]:text-white p-text"
             >
               Short Lets
             </TabsTrigger>
