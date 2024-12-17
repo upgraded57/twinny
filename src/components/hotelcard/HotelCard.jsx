@@ -5,12 +5,17 @@ import { Link } from "react-router-dom";
 export default function HotelCard({ hotel }) {
   return (
     <div className="block w-full">
-      <div className="w-full max-h-[290px] overflow-hidden">
+      <div className="w-full max-h-[290px] overflow-hidden relative">
         <img
           src={hotel.img}
           alt={hotel.title}
           className="w-full h-full object-cover"
         />
+        {hotel.type === "shortlet" && (
+          <span className="absolute top-5 right-5 px-2 py-1 rounded-lg border-[1px] border-white bg-pry-clr text-white text-sm">
+            Short Let
+          </span>
+        )}
       </div>
       <h1 className="h-text text-2xl my-4 md:text-4xl">{hotel.title}</h1>
       <div className="flex items-center gap-3 my-2">
