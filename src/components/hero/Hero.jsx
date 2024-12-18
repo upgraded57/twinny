@@ -145,17 +145,15 @@ export default function Hero() {
                   <SelectGroup>
                     <SelectLabel>Guests</SelectLabel>
 
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(
-                      (num, idx) => (
-                        <SelectItem
-                          key={idx}
-                          value={num}
-                          className="hover:bg-gray-100"
-                        >
-                          <p className="p-text uppercase">{num}</p>
-                        </SelectItem>
-                      )
-                    )}
+                    {[1, 2, 3, 4].map((num, idx) => (
+                      <SelectItem
+                        key={idx}
+                        value={num}
+                        className="hover:bg-gray-100"
+                      >
+                        <p className="p-text uppercase">{num}</p>
+                      </SelectItem>
+                    ))}
                   </SelectGroup>
                 </SelectContent>
               </Select>
