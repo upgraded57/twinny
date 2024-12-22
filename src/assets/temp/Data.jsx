@@ -61,7 +61,7 @@ export const hotelsData = [
     title: "Deluxe 2 Bedroom",
     location:
       "Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria",
-    price: "150,000",
+    price: "100,000",
     type: "shortlet",
     features: [
       {
