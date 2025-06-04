@@ -19,7 +19,7 @@ export default function Hotel({ hotel }) {
           )}
         </div>
         <div className="flex-1 md:basis-1/2">
-          <h2 className="h-text text-3xl lg:text-5xl overflow-hidden text-ellipsis text-nowrap">
+          <h2 className="h-text text-3xl lg:text-5xl max-w-md">
             {hotel.title}
           </h2>
           <div className="flex items-center gap-3 my-2">
