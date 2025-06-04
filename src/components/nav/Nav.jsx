@@ -29,11 +29,6 @@ export default function Nav({ type }) {
             className="w-[26px]"
           />
         </Link>
-        {/* <img
-          src={type === 1 ? x_logo : x_logo_gold}
-          alt="X - Twitter"
-          className="w-[26px]"
-        /> */}
         <Link
           to="https://web.facebook.com/profile.php?id=61564680452916"
           target="_blank"
@@ -44,11 +39,6 @@ export default function Nav({ type }) {
             className="w-[26px]"
           />
         </Link>
-        {/* <img
-          src={type === 1 ? tt_logo : tt_logo_gold}
-          alt="Tiktok"
-          className="w-[26px]"
-        /> */}
       </nav>
     </header>
   );

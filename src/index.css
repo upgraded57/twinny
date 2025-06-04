@@ -32,7 +32,8 @@
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/images/Reception_Restaurant/Reception_2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://res.cloudinary.com/dshuchoca/image/upload/v1749055807/twinny/reception/Reception_2_lbgegf.jpg");
   background-color: black;
   background-position: right;
   background-repeat: no-repeat;
