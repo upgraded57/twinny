@@ -77,7 +77,7 @@ export default function Hotel() {
             <div className="md:hidden">
               <Carousel>
                 <CarouselContent className="w-full h-full gap-2">
-                  {hotel.images.slice(0, 4).map((image, idx) => (
+                  {hotel.images.map((image, idx) => (
                     <CarouselItem className="basis-[93%]" key={idx}>
                       <img
                         src={image}
