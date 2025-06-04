@@ -58,11 +58,12 @@ export const hotelsData = [
     id: 2,
     img: images.filter((img) => img.id === 2)[0].items[0],
     images: images.filter((img) => img.id === 2)[0].items,
-    title: "Deluxe 2 Bedroom",
+    title: "2 Bedroom Shortlet Apartment in Lekki",
     location:
       "Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria",
-    price: "100,000",
+    price: "150,000",
     type: "shortlet",
+    negotiable: true,
     features: [
       {
         text: "Air Conditioner",

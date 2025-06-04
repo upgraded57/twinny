@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import fb_logo from "@/assets/images/svgs/fb_black.svg";
 import ig_logo from "@/assets/images/svgs/ig_black.svg";
 
-export default function Footer() {
+export default function Footer({ address, number }) {
   return (
     <footer className="px-[4vw] bg-pry-clr text-black py-10">
       <div className="flex justify-center border-b-[1px] border-black pb-8">
@@ -16,8 +16,8 @@ export default function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 py-8 gap-10 text-center md:text-left  border-b-[1px] border-black">
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={callImg} alt="Call" className="h-[28px]" />
-          <Link to="tel:2348140778877" className="p-text">
-            0814 077 8877
+          <Link to={`tel:${number || "2348140778877"}`} className="p-text">
+            {number || "0814 077 8877"}
           </Link>
           <div className="flex items-center gap-4">
             <Link
@@ -42,7 +42,8 @@ export default function Footer() {
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={pinImg} alt="Call" className="h-[28px]" />
           <p className="p-text max-w-[300px]">
-            Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos
+            {address ||
+              "Ramoni Jimoh St, beside Bokku Mart, Ejigbo, Ikeja 100264, Lagos"}
           </p>
         </div>
       </div>

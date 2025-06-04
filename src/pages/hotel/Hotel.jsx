@@ -130,7 +130,11 @@ export default function Hotel() {
               />
             </span>
             <p className="p-text text-[16px] md:text-[24px]">
-              {hotel.type === "shortlet" ? "0803 155 7429" : "0814 077 8877"}
+              {hotel.negotiable
+                ? "+234 903 230 3758"
+                : hotel.type === "shortlet"
+                ? "0803 155 7429"
+                : "0814 077 8877"}
             </p>
           </div>
 
@@ -175,7 +179,10 @@ export default function Hotel() {
         </div>
       </div>
 
-      <Footer />
+      <Footer
+        address="Chief Mba close, Off Gbangbala Street, Ikate Elegushi, Lagos, Nigeria"
+        number="234 903 230 3758"
+      />
       <BookModal isOpen={openModal} setIsOpen={setOpenModal} hotel={hotel} />
     </>
   );

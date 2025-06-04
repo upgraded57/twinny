@@ -41,7 +41,9 @@ export default function Hotel({ hotel }) {
             <span className="flex items-end">
               <h3 className="h-text border-b-2 text-5xl">{`NGN${hotel.price}`}</h3>
               <h3 className="h-text text-5xl">/</h3>
-              <p className="h-text text-lg">Night</p>
+              <p className="h-text text-lg">
+                Night {hotel.negotiable && "(Negotiable)"}
+              </p>
             </span>
           </div>
 
