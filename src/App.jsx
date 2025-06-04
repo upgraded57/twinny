@@ -9,7 +9,7 @@ function App() {
     const currentLocation = window.location.pathname;
     const isShortlet = currentLocation === "/hotel/2";
     window.location = isShortlet
-      ? `https://wa.me/2348031557429?text=Hi, I want to enquire about Twinny hotels and suites apartments`
+      ? `https://wa.me/2349032303758?text=Hi, I want to enquire about Twinny hotels and suites apartments`
       : `https://wa.me/2348140778877?text=Hi, I want to enquire about Twinny hotels and suites apartments`;
   };
   return (
