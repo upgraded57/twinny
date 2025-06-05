@@ -39,9 +39,9 @@ export default function About() {
             top choice for travellers looking for hotels close to Lagos airport.
             Being one of the finest hotels in Oshodi-Isolo, our well-furnished
             rooms, excellent customer service, and relaxing atmosphere make us
-            one of the best and most affordable hotels in Ajao Estate. If you're
-            searching for hotels near Murtala Muhammed International Airport
-            Lagos, our hotel and restaurant is just 15 minutes away
+            one of the best and most affordable hotels in Ajao Estate. If
+            you&apos;re searching for hotels near Murtala Muhammed International
+            Airport Lagos, our hotel and restaurant is just 15 minutes away
           </p>
 
           <div className="mt-[100px]">

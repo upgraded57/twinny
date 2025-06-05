@@ -37,7 +37,6 @@ export default function Footer({ address, number }) {
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={mailImg} alt="Call" className="h-[28px]" />
           <p className="p-text">hello@twinnyhotelandsuites.com</p>
-          <p className="p-text">abiodun@twinnyhotelandsuites.com</p>
         </div>
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={pinImg} alt="Call" className="h-[28px]" />
