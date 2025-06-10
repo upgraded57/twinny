@@ -33,6 +33,13 @@ export const images = [
       "https://res.cloudinary.com/dshuchoca/image/upload/v1749053649/twinny/deluxe_2_bedroom/room_8_xgw48a.jpg",
       "https://res.cloudinary.com/dshuchoca/image/upload/v1749053644/twinny/deluxe_2_bedroom/room_4_vqggwi.jpg",
       "https://res.cloudinary.com/dshuchoca/image/upload/v1749053644/twinny/deluxe_2_bedroom/room_1_g7xksj.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579745/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.45_2_nuwjuc.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579747/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.45_4_lvu4ba.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579747/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.45_mkx5zm.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579749/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.48_1_rfx610.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579749/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.45_5_bijcuo.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579749/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.46_1_spz0xw.jpg",
+      "https://res.cloudinary.com/dshuchoca/image/upload/v1749579751/twinny/deluxe_2_bedroom/WhatsApp_Image_2025-06-10_at_16.11.46_2_ndzvoo.jpg"
     ],
   },
   {

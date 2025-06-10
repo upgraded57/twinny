@@ -48,7 +48,7 @@ export default function Hotel({ hotel }) {
           </div>
 
           <Link to={`/hotel/${hotel.id}`}>
-            <button type="button" className="py-3 px-6 p-text my-4 bg-pry-clr">
+            <button type="button" className="py-3 px-6 p-text my-4 bg-pry-clr" id={hotel.title}>
               Book Reservation
             </button>
           </Link>
@@ -60,7 +60,7 @@ export default function Hotel({ hotel }) {
           hotel.layout === "normal" ? "justify-end" : "justify-start"
         } px-[4vw]`}
       >
-        <div className="w-full lg:w-[85%] bg-opacity-75 backdrop-blur-md relative lg:-top-[25px] xl:-top-[100px] bg-gray-300 p-4">
+        <div className="w-full lg:w-[85%] bg-opacity-75 backdrop-blur-md relative lg:-top-[5px] xl:-top-[50px] bg-gray-300 p-4">
           <h2 className="h-text bg-[#5F462C] w-full max-w-[421px] px-4 py-2 text-white text-2xl md:text-3xl">
             Features
           </h2>

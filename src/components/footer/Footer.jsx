@@ -16,7 +16,7 @@ export default function Footer({ address, number }) {
       <div className="grid grid-cols-1 md:grid-cols-3 py-8 gap-10 text-center md:text-left  border-b-[1px] border-black">
         <div className="flex gap-2 flex-col items-center md:items-start">
           <img src={callImg} alt="Call" className="h-[28px]" />
-          <Link to={`tel:${number || "2348140778877"}`} className="p-text">
+          <Link to={`tel:${number || "2348140778877"}`} className="p-text" id="contact-us-on-whatsapp">
             {number || "0814 077 8877"}
           </Link>
           <div className="flex items-center gap-4">

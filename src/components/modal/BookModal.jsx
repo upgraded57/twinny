@@ -131,6 +131,7 @@ export default function BookModal({ isOpen, setIsOpen, hotel }) {
           </div>
 
           <button
+          id={`book hotel - ${hotel.title}`}
             className=" pry-bg h-text p-3 md:p-5 flex items-center gap-3 justify-center font-semibold"
             onClick={handleBooking}
           >

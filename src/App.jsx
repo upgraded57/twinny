@@ -18,6 +18,7 @@ function App() {
       <div
         className="fixed bottom-5 right-5 w-10 overflow-hidden"
         onClick={handleNavigate}
+        id="floating-whatsapp"
       >
         <img
           src={whatsapp}

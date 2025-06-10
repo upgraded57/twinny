@@ -163,6 +163,7 @@ export default function Hero() {
           <button
             className="basis-2/12 pry-bg h-text p-3 md:p-5"
             onClick={handleBooking}
+            id={`Apartment - ${booking.apartment} check in - ${booking.checkIn} checkout - ${booking.checkOut} guests - ${booking.guests}`}
           >
             Book Reservations
           </button>
